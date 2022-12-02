@@ -15,6 +15,8 @@ for p in elves_payload:
     elf_list = p.splitlines(keepends=False)
     all_calories.append(sum_from_list(elf_list))
 
-print(sorted(all_calories)[-1])
+
+all_calories = sorted(all_calories, reverse=True)
+print(sum_from_list(all_calories[0:3]))
 
 
